@@ -1,0 +1,5 @@
+[run]
+include = jardam_kolu/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
