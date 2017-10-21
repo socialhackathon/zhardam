@@ -49,7 +49,9 @@ THIRD_PARTY_APPS = [
     'allauth',  # registration
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
-    'rest_framework'
+    'rest_framework',
+    'simple_pagination',
+    'django_blog_it.django_blog_it',
 ]
 
 # Apps specific for this project go here.

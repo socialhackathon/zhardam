@@ -15,6 +15,7 @@ urlpatterns = [
     # User management
     url(r'^users/', include('jardam_kolu.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'', include('django_blog_it.urls')),
 
     # Your stuff: custom urls includes go here
     url(r'', include('jardam_kolu.quizes.urls', namespace='quizes')),
