@@ -50,4 +50,6 @@ celery==3.1.25
 djangorestframework
 python-string-utils
 stop-words
-django-blog-it
+django-ordered-model
+django-andablog
+django-taggit

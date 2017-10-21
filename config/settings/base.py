@@ -50,8 +50,12 @@ THIRD_PARTY_APPS = [
     'allauth.account',  # registration
     'allauth.socialaccount',  # registration
     'rest_framework',
-    'simple_pagination',
-    'django_blog_it.django_blog_it',
+    # 'simple_pagination',
+    # 'django_blog_it.django_blog_it',
+    'andablog',
+    'ordered_model',
+    'markitup',
+    'taggit',
 ]
 
 # Apps specific for this project go here.
@@ -286,3 +290,6 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
+MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False})
+MARKITUP_SET = 'markitup/sets/markdown/'
+
