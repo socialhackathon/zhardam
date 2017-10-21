@@ -53,3 +53,4 @@ stop-words
 django-ordered-model
 django-andablog
 django-taggit
+markdown

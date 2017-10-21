@@ -292,4 +292,3 @@ ADMIN_URL = r'^admin/'
 # ------------------------------------------------------------------------------
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False})
 MARKITUP_SET = 'markitup/sets/markdown/'
-
