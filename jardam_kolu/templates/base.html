@@ -1,12 +1,13 @@
 {% load static i18n %}<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{% block title %}Jardam Kolu{% endblock title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+{#    <mimeMap fileExtension=".css" mimeType="application/octet-stream" />#}
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -14,93 +15,318 @@
     <![endif]-->
 
     {% block css %}
-    <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <!-- Latest compiled and minified Bootstrap 4 beta CSS -->
+        {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">#}
 
-    <!-- Your stuff: Third-party CSS libraries go here -->
-    
-    <!-- This file stores project-specific CSS -->
-    <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
+        {#        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.css.map">#}
+        <!-- Your stuff: Third-party CSS libraries go here -->
+
+
+        <!-- Bootstrap styles -->
+{#        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">#}
+{#        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">#}
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+        <!-- Font-Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Google Webfonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CPT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- This file stores project-specific CSS -->
+        <link rel="stylesheet" href="{% static 'css/styles-bluegreen.css' %}" id="theme-styles">
+        <link rel="stylesheet" href="{% static 'css/settings-panel.css' %}">
+
+        <!-- Styles -->
+        <link href="{% static 'css/project.css' %}" rel="stylesheet">
+
     {% endblock %}
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="m-b-1">
-      <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'home' %}">Jardam Kolu</a>
+<header>
+    <div class="widewrapper masthead">
+        <div class="container">
+            <a href="index.html" id="logo">
+                Жардам колу
+                <!--Use the following line instead if you want to use an image logo-->
+                <!--<img src="img/tales-logo.png" alt="Tales Blog">-->
+            </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            {% if request.user.is_authenticated %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-              </li>
-              <li class="nav-item">
-                {# URL provided by django-allauth/account/urls.py #}
-                <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-              </li>
-            {% endif %}
-          </ul>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".tales-nav .navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+            <nav class="pull-right tales-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+
+                        <li class="dropdown active">
+                            <a class="dropdown-toggle"
+                               data-toggle="dropdown"
+                               href="#">
+                                Blog
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Blog</a></li>
+                                <li><a href="blog-detail.html">Blog Detail</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="credits.html">Credits</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
         </div>
-      </nav>
-
     </div>
 
+    <div class="widewrapper subheader">
+        <div class="container">
+            <div class="tales-breadcrumb">
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="tales-searchbox">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <button class="searchbutton" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="widewrapper main">
     <div class="container">
+        <div class="row">
+            <div class="col-md-8 blog-main">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <article class=" blog-teaser">
+                            <header>
+                                <img src="{% static 'images/cat.png' %}" alt="A Cat">
+                                <h3><a href="blog-detail.html">Cats Everywhere</a></h3>
+                                <span class="meta">24 July 2013, Alexander Rechsteiner</span>
+                                <hr>
+                            </header>
+                            <div class="body">
+                                Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta.
+                            </div>
+                            <div class="clearfix">
+                                <a href="blog-detail.html" class="btn btn-tales-one">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <article class="blog-teaser">
+                            <header>
+                                <img src="{% static 'images/hands.png' %}" alt="Hands">
+                                <h3><a href="blog-detail.html">Big Thinkers</a></h3>
+                                <span class="meta">24 July 2013, Alexander Rechsteiner</span>
+                                <hr>
+                            </header>
+                            <div class="body">
+                                Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta.
+                            </div>
+                            <div class="clearfix">
+                                <a href="blog-detail.html" class="btn btn-tales-one">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-      {% if messages %}
-          {% for message in messages %}
-              <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
-          {% endfor %}
-      {% endif %}
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <article class="blog-teaser">
+                            <header>
+                                <img src="{% static 'images/bike.png' %}" alt="A Bike">
+                                <h3><a href="blog-detail.html">My Insightful Article</a></h3>
+                                <span class="meta">24 July 2013, Alexander Rechsteiner</span>
+                                <hr>
+                            </header>
+                            <div class="body">
+                                Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta.
+                            </div>
+                            <div class="clearfix">
+                                <a href="blog-detail.html" class="btn btn-tales-one">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <article class="blog-teaser">
+                            <header>
+                                <img src="{% static 'images/violin.png' %}" alt="A Violin Player">
+                                <h3><a href="blog-detail.html">Why I Play Violin</a></h3>
+                                <span class="meta">24 July 2013, Alexander Rechsteiner</span>
+                                <hr>
+                            </header>
+                            <div class="body">
+                                Bacon ipsum dolor sit amet esse duis pastrami anim, pancetta fatback capicola officia tenderloin. Meatloaf culpa ut, bacon sed sausage jerky cillum est ham ad laboris ham hock dolore. Venison ut enim, aliqua elit frankfurter et incididunt consequat culpa nostru aliqua elit pancetta.
+                            </div>
+                            <div class="clearfix">
+                                <a href="blog-detail.html" class="btn btn-tales-one">Read more</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
+                <div class="paging">
+                    <a href="#" class="newer"><i class="fa fa-long-arrow-left"></i> Newer</a>
+                    <span>&bull;</span>
+                    <a href="#" class="older">Older <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+            <aside class="col-md-4 blog-aside">
 
-    </div> <!-- /container -->
+                <div class="aside-widget">
+                    <header>
+                        <h3>Read next...</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="tales-list">
+                            <li><a href="index.html">Email Encryption Explained</a></li>
+                            <li><a href="#">Selling is a Function of Design.</a></li>
+                            <li><a href="#">It’s Hard To Come Up With Dummy Titles</a></li>
+                            <li><a href="#">Why the Internet is Full of Cats</a></li>
+                            <li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-    {% block modal %}{% endblock modal %}
+                <div class="aside-widget">
+                    <header>
+                        <h3>Authors Favorites</h3>
+                    </header>
+                    <div class="body">
+                        <ul class="tales-list">
+                            <li><a href="index.html">Email Encryption Explained</a></li>
+                            <li><a href="#">Selling is a Function of Design.</a></li>
+                            <li><a href="#">It’s Hard To Come Up With Dummy Titles</a></li>
+                            <li><a href="#">Why the Internet is Full of Cats</a></li>
+                            <li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    {% block javascript %}
-      <!-- Required by Bootstrap v4 beta -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+                <div class="aside-widget">
+                    <header>
+                        <h3>Tags</h3>
+                    </header>
+                    <div class="body clearfix">
+                        <ul class="tags">
+                            <li><a href="#">OpenPGP</a></li>
+                            <li><a href="#">Django</a></li>
+                            <li><a href="#">Bitcoin</a></li>
+                            <li><a href="#">Security</a></li>
+                            <li><a href="#">GNU/Linux</a></li>
+                            <li><a href="#">Git</a></li>
+                            <li><a href="#">Homebrew</a></li>
+                            <li><a href="#">Debian</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
 
-      <!-- Your stuff: Third-party javascript libraries go here -->
+<footer>
+    <div class="widewrapper footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="fa fa-wpforms"></i>Statistics</h3>
 
-      <!-- place project specific Javascript in this file -->
-      
-      <script src="{% static 'js/project.js' %}"></script>
-      
+                    <span>Even we sometimes loose track of how many articles we actually have here.  This one helps:</span>
 
-    {% endblock javascript %}
-  </body>
+                    <div class="stats">
+                        <div class="line">
+                            <span class="counter">27</span>
+                            <span class="caption">Articles</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter">208</span>
+                            <span class="caption">Comments</span>
+                        </div>
+                        <div class="line">
+                            <span class="counter">2</span>
+                            <span class="caption">Authors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="fa fa-star"></i> Hall of Fame</h3>
+                    <ul class="tales-list">
+                        <li><a href="index.html">Why we Need to Encrypt All Communication</a></li>
+                        <li><a href="#">Selling is a Function of Design. Not Vice-Versa.</a></li>
+                        <li><a href="#">It’s Hard To Come Up With Dummy Titles</a></li>
+                        <li><a href="#">Why the Internet is Full of Cats</a></li>
+                        <li><a href="#">Last Made-Up Headline, I Swear!</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-widget">
+                    <h3> <i class="fa fa-envelope"></i>Contact Me</h3>
+
+                    <span>I'm happy to hear from my readers. Thoughts, feedback, critique - all welcome! Drop me a line:</span>
+
+                    <span class="email">
+                            <a href="#">info@jardamkolu.kg</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% block modal %}{% endblock modal %}
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{% block javascript %}
+    <!-- Required by Bootstrap v4 beta -->
+    {#      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>#}
+    {#      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>#}
+    {#      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>#}
+
+    <!-- Your stuff: Third-party javascript libraries go here -->
+
+    <!-- place project specific Javascript in this file -->
+
+
+    <script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+
+    <!--[if lt IE 9]-->
+    <script src="{% static 'js/html5-3.6-respond-1.1.0.min.js' %}"></script>
+    <!--[endif]-->
+
+{##}
+{#    <script src="{% static 'js/cookie-js.js' %}" type="text/javascript"></script>#}
+{#    <script src="{% static 'js/settings-panel.js' %}" type="text/javascript"></script>#}
+{#    <script src="{% static 'js/project.js' %}"></script>#}
+    {#    <script> thisIsMadness(); </script>#}
+
+    <!--Font for the overlay screens-->
+
+    <script src="http://hackerthemes.com/js/analytics.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+{% endblock javascript %}
+</body>
 </html>
- 
+
