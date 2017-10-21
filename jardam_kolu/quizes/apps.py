@@ -27,18 +27,24 @@ class QuizAppConfig(AppConfig):
 
         package = scenarios
         prefix = package.__name__ + "."
+        print("prefix", prefix)
 
         for importer, modname, ispkg in pkgutil.iter_modules(package.__path__, prefix):
-            if '__' in modname:
+            if '__' in modname or ispkg:
+                print("modname", modname)
                 continue
-            module = __import__(modname)
+
+            module = __import__(modname, fromlist=prefix)
 
             logger.debug("Importing {} module.".format(modname))
-            print(modname)
             if not hasattr(module, 'scenario'):
                 continue
             scenario = Scenario(
                 script=modname, scenario=module.scenario,
             )
+            print('yolo n1')
+
             if scenario.is_valid():
-                self.scenarios.append(scenarios)
+                print('yolo n2')
+                self.scenarios.append(scenario)
+        print(self.scenarios)

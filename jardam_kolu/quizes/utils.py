@@ -46,8 +46,8 @@ class Scenario(object):
             assert len(answers) > 0, "Question should always contain answer"
             for a_id, answer in answers.items():
                 answer_type = answer['type']
-                assert 'text' in answer and type(answer.get('text')) == str, \
-                    "There should be field of the text and it should be a str"
+                assert 'text' in answer, \
+                    "In answer there should be field of the text and it should be a str"
                 if answer_type in [ARTICLE, EXTERNAL, SBSS]:
                     assert su.is_url(answer['content']), "Content of the answer of this type should be url"
                 elif answer_type in [QUESTION, ]:
