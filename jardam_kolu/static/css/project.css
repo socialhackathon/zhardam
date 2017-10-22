@@ -25,16 +25,18 @@ a {
 }
 
 .top-navbar {
-    width: 100%;
-    height: 80px;
-    background-color: #593093;
+  width: 100%;
+  height: 80px;
+  background-color: #306993;
 }
 
 .top-section {
     background-color: #2ab5bb;
     background-image: -webkit-linear-gradient(315deg, #2ab5bb 8%, #2a7bbb);
     background-image: linear-gradient(135deg, #2ab5bb 8%, #2a7bbb);
-    padding-top: 170px;
+    background: url('/static/images/background.jpg') no-repeat fixed center;
+    background-size: cover;
+    padding-top: 150px;
     padding-bottom: 100px;
 }
 
@@ -48,8 +50,10 @@ a {
 }
 
 .profits-section .card {
-    background-color: #2f6692;
-    color: #fff;
+    background-color: #f9f9f9;
+    color: #0c0b0b;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid #fff;
 }
 
 main {
@@ -70,6 +74,8 @@ main {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+
 
 .quiz {
     padding: 15px 0 0;
@@ -120,7 +126,7 @@ main {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.7em;
     font-family: 'museo_sans700', sans-serif;
     margin: 60px auto 10px;
     text-align: center;
@@ -144,4 +150,8 @@ h1 {
 .article {
   max-width: 1000px;
   margin: auto;
+}
+
+.logo {
+  width: 50px;
 }
