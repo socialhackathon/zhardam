@@ -2,28 +2,33 @@
 {% load i18n %}
 
 {% block main %}
+    <h1> Специалист</h1>
+    <div class="contact-list">
     {{ contact.name }}
     {{ contact.complex }}
+
     {#    TODO: add captcha to show data #}
     <button id="show_contacts">
         {% trans "Show contact" %}
     </button>
+
     <div id="contacts"></div>
-    <div id="recaptcha">
-        <form action="javascript:grecaptcha.reset(widgetId2);" method="POST">
-          <div id = "example2" class="g-recaptcha" data-sitekey="6LeNUTUUAAAAAL5UFy02TDnEoCX0hF1SMY1BjHq7"></div>
-          <br/>
-        </form>
     </div>
+{#    <div id="recaptcha">#}
+{#        <form action="javascript:grecaptcha.reset(widgetId2);" method="POST">#}
+{#          <div id = "example2" class="g-recaptcha" data-sitekey="6LeNUTUUAAAAAL5UFy02TDnEoCX0hF1SMY1BjHq7"></div>#}
+{#          <br/>#}
+{#        </form>#}
+{#    </div>#}
 
     <script>
         {#        TODO: почините тут js!!!!#}
         $('#show_contacts').click(function(){
 
-            widgetId2 = grecaptcha.render(document.getElementById('example2'), {
-              'sitekey' : '6LeNUTUUAAAAAL5UFy02TDnEoCX0hF1SMY1BjHq7'
-            });
-
+{#            widgetId2 = grecaptcha.render(document.getElementById('example2'), {#}
+{#              'sitekey' : '6LeNUTUUAAAAAL5UFy02TDnEoCX0hF1SMY1BjHq7'#}
+{#            });#}
+            $( "#contacts" ).show();
             $.get("{% url 'contact-show' contact.id %}",
                 function( data ) {
                     console.log('got contacts');

@@ -194,3 +194,17 @@ html {
   border-radius: 5px;
   padding: 3px;
 }
+
+.contact-list {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+#contacts {
+  display: none;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  max-width: 350px;
+  margin-top: 20px;
+}
