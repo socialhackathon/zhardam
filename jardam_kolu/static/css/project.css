@@ -75,8 +75,6 @@ main {
 }
 
 .quiz-bg {
-    background: url('/static/images/quiz-bg.jpg') no-repeat fixed center;
-    background-size: cover;
     min-height: 600px;
     padding-top: 25px;
     padding-bottom: 25px;

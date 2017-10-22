@@ -2,6 +2,13 @@
 {% load static staticfiles %}
 
 {% block main %}
+    <style>
+        .quiz-bg {
+            background: url({% static 'images/quiz-bg.jpg' %}) no-repeat fixed center;
+            background-size: cover;
+        }
+
+    </style>
     <div class="quiz-bg">
         <div class="container d-flex justify-content-center align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="lds-spinner"

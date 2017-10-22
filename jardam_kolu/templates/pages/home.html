@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 {% load i18n static %}
 {% block main %}
+    <style>
+        .top-section {
+            background: url({% static 'images/background.jpg' %}) no-repeat fixed center;
+            background-size: cover;
+            min-height: calc(100vh - 80px);
+        }
+    </style>
 
     <div class="top-section">
-        <img src="{% static 'images/background.jpg' %}">
         <div class="container">
+
             <h1 class="top-section__heading">
                 Вы или ваш близкий человек столкнулся с насилием? <br>
                 Мы можем вам <a href="{% url 'quizes:quiz' %}"

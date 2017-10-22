@@ -13,7 +13,7 @@
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <module name="jardam_kolu" />
     <option name="launchJavascriptDebuger" value="false" />
-    <option name="host" value="" />
+    <option name="host" value="192.168.99.100" />
     <option name="additionalOptions" value="" />
     <option name="browserUrl" value="http://127.0.0.1/" />
     <option name="runTestServer" value="false" />
