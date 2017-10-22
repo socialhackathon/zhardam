@@ -140,3 +140,8 @@ h1 {
     font-size: 1.2em;
     padding: 10px;
 }
+
+.article {
+  max-width: 1000px;
+  margin: auto;
+}
