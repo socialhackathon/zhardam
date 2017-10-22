@@ -32,7 +32,7 @@ scenario = OrderedDict({
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },
@@ -54,7 +54,7 @@ scenario = OrderedDict({
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },
@@ -77,7 +77,7 @@ scenario = OrderedDict({
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },
