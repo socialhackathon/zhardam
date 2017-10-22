@@ -55,7 +55,7 @@ scenario = OrderedDict({
             {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/4/'
+                'content': 'https://zhardam.ga/articles/p/4/'
             }
         ]
     },
@@ -71,7 +71,7 @@ scenario = OrderedDict({
             {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': '/articles/1/'
+                'content': '/articles/p/1/'
             }
         ]
     },
@@ -87,7 +87,7 @@ scenario = OrderedDict({
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': '/articles/1/',
+                'content': '/articles/p/4/',
             }
         ]
     },
@@ -118,7 +118,7 @@ scenario = OrderedDict({
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': '/articles/p/6/',
+                'content': '/articles/p/1/',
             }
         ]
     },
