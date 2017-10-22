@@ -58,6 +58,9 @@ main {
 
 .footer {
     background-color: #0d1c25;
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
 }
 
 .quiz-bg {
@@ -102,4 +105,38 @@ main {
     font-size: 17px;
     margin-bottom: 7px;
     display: flex;
+}
+
+#about {
+    background: white;
+    border-bottom: 1px solid #328AA7;
+    color: black;
+}
+
+.width {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-family: 'museo_sans700', sans-serif;
+    margin: 60px auto 10px;
+    text-align: center;
+}
+
+#about .subhead {
+    font-size: 1.5em;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 40px auto;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    padding: 10px;
 }
