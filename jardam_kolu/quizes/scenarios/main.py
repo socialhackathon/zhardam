@@ -8,7 +8,6 @@ scenario = OrderedDict({
     'start': {
         'text': _("Кто вы?"),
         'answers': [
-
             {
                 'text': _('Жертва'),
                 'type': QUESTION,
@@ -37,14 +36,9 @@ scenario = OrderedDict({
                 'content': 'q-2.1'
             },
             {
-                'text': _('Похищение'),
-                'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
-            },
-            {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/p/4/'
             }
         ]
 
@@ -59,18 +53,11 @@ scenario = OrderedDict({
                 'content': 'q-2.1'
             },
             {
-                'text': _('Похищение'),
-                'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
-            },
-            {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': 'https://zhardam.ga/articles/4/'
             }
         ]
-
-
     },
     'q-1.3': {
         'text': _("Что произошло?"),
@@ -82,14 +69,9 @@ scenario = OrderedDict({
                 'content': 'q-2.1'
             },
             {
-                'text': _('Похищение'),
-                'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
-            },
-            {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             }
         ]
     },
@@ -105,24 +87,54 @@ scenario = OrderedDict({
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/',
+                'content': '/articles/1/',
             }
         ]
     },
     'q-3.1': {
-        'text': _('Вы желаете бесплатную или платную помощь?'),
+        'text': _('Вы желаете бесплатную или платную психологическую помощь?'),
         'answers': [
 
             {
-                'text': _('Да'),
+                'text': _('Бесплатную'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/contacts/1/',
+                'content': '/contacts/1/',
+            },
+            {
+                'text': _('Платную'),
+                'type': ARTICLE,
+                'content': '/contacts/2/',
+            }
+        ],
+    },
+    'q-2.3': {
+        'text': _('Вы желаете получить юридическую помощь?'),
+        'answers': [
+            {
+                'text': _('Да'),
+                'type': QUESTION,
+                'content': 'q-3.2'
             },
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/contacts/2/',
+                'content': '/articles/p/6/',
             }
         ]
-    }
+    },
+    'q-3.2': {
+        'text': _('Вы желаете бесплатную или платную юридическую помощь?'),
+        'answers': [
+            {
+                'text': _('Бесплатную'),
+                'type': ARTICLE,
+                'content': '/contacts/7/',
+            },
+            {
+                'text': _('Платную'),
+                'type': ARTICLE,
+                'content': '/contacts/6/',
+            }
+        ],
+    },
 })
