@@ -1,7 +1,3 @@
-www.{$DOMAIN_NAME} {
-    redir https://zhardam.ga
-}
-
 {$DOMAIN_NAME} {
     proxy / django:5000 {
         header_upstream Host {host}
@@ -12,3 +8,5 @@ www.{$DOMAIN_NAME} {
     errors stdout
     gzip
 }
+
+tls amywoodehy@gmail.com

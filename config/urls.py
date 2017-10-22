@@ -20,6 +20,7 @@ urlpatterns = [
     # Your stuff: custom urls includes go here
     url(r'^quiz/', include('jardam_kolu.quizes.urls', namespace='quizes')),
     url(r'^blog/', include('andablog.urls', namespace='andablog')),
+    url(r'^articles/', include('jardam_kolu.articles.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

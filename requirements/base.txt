@@ -54,3 +54,5 @@ django-ordered-model
 django-andablog
 django-taggit
 markdown
+django-ckeditor
+

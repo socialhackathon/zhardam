@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    {% for article in article_list %}
+        {% include 'articles/article-card.html' %}
+    {% endfor %}
+{% endblock %}

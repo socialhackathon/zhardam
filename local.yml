@@ -17,7 +17,7 @@ services:
     environment:
       - POSTGRES_USER=jardam_kolu
       - USE_DOCKER=yes
-      - DISQUSSHORTNAME=jardam-kolu
+      - DISQUS_SHORT_NAME=jardam-kolu
       - GOOGLE_CAPTCHA_SITE_KEY
       - GOOGLE_CAPTCHA_SECRET_KEY
     ports:

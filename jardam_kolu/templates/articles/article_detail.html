@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    {% include 'articles/article-card.html' %}
+
+    <div class="disqus">
+        {% include 'articles/disqus.html' %}
+    </div>
+{% endblock %}

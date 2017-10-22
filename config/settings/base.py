@@ -56,6 +56,7 @@ THIRD_PARTY_APPS = [
     'ordered_model',
     'markitup',
     'taggit',
+    'ckeditor',
 ]
 
 # Apps specific for this project go here.
@@ -64,6 +65,7 @@ LOCAL_APPS = [
     'jardam_kolu.users.apps.UsersConfig',
     # Your stuff: custom apps go here
     'jardam_kolu.quizes.apps.QuizAppConfig',
+    'jardam_kolu.articles',
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -178,6 +180,8 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 # Your stuff: custom template context processors go here
+                'jardam_kolu.articles.context_processors.disqus_short_name',
+                'jardam_kolu.articles.context_processors.main_page_articles',
             ],
         },
     },
@@ -292,3 +296,5 @@ ADMIN_URL = r'^admin/'
 # ------------------------------------------------------------------------------
 MARKITUP_FILTER = ('markdown.markdown', {'safe_mode': False})
 MARKITUP_SET = 'markitup/sets/markdown/'
+
+DISQUS_SHORT_NAME = env.get_value('DISQUS_SHORT_NAME')
