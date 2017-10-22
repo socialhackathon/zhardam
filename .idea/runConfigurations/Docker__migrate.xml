@@ -12,17 +12,10 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <module name="jardam_kolu" />
-    <PathMappingSettings>
-      <option name="pathMappings">
-        <list>
-          <mapping local-root="$PROJECT_DIR$" remote-root="/app" />
-        </list>
-      </option>
-    </PathMappingSettings>
     <option name="launchJavascriptDebuger" value="false" />
     <option name="host" value="192.168.99.100" />
     <option name="additionalOptions" value="" />
-    <option name="browserUrl" value="" />
+    <option name="browserUrl" value="http://127.0.0.1/" />
     <option name="runTestServer" value="false" />
     <option name="runNoReload" value="false" />
     <option name="useCustomRunCommand" value="true" />
