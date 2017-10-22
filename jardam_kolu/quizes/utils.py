@@ -44,7 +44,7 @@ class Scenario(object):
         for q_id, question in tree.items():
             answers = question.get('answers')
             assert len(answers) > 0, "Question should always contain answer"
-            for a_id, answer in answers.items():
+            for a_id, answer in enumerate(answers):
                 answer_type = answer['type']
                 assert 'text' in answer, \
                     "In answer there should be field of the text and it should be a str"
