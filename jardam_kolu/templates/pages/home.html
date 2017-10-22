@@ -12,9 +12,12 @@
 
     <div class="container profits-section">
         <div class="card-deck">
-            {% for article in main_articles %}
-                {% include 'articles/article-card.html' with article=article %}
-            {% endfor %}
+                {% for article in main_articles %}
+                    <div class="card">
+                    {% include 'articles/article-card.html' with article=article %}
+                    </div>
+                {% endfor %}
+
         </div>
     </div>
 {% endblock %}
