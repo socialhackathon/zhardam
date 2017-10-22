@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{% load i18n static %}
 {% block main %}
 
     <div class="top-section">
+        <img src="{% static 'images/background.jpg' %}">
         <div class="container">
-
             <h1 class="top-section__heading">
                 Вы или ваш близкий человек столкнулся с насилием? <br>
                 Мы можем вам <a href="{% url 'quizes:quiz' %}"
