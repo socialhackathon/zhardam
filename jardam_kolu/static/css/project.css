@@ -174,3 +174,21 @@ body {
 html {
   height:100%;
 }
+
+.bottom-left {
+  float: left;
+}
+
+.bottom-right {
+  float: right;
+}
+
+.icons {
+  font-size: 48px;
+  color: white;
+  margin-left: 3px;
+  border: 1px solid #fff;
+  width: 50px;
+  border-radius: 5px;
+  padding: 3px;
+}
