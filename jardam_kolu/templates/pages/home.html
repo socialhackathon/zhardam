@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block main %}
+    <style>
+        .top-section {
+            background: url({% static 'images/background.jpg' %}) no-repeat fixed center;
+            background-size: cover;
+        }
+    </style>
 
     <div class="top-section">
         <div class="container">
