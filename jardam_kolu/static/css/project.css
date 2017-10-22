@@ -57,14 +57,11 @@ a {
 }
 
 main {
-    margin-bottom: 65px;
+    /*margin-bottom: 65px;*/
 }
 
 .footer {
     background-color: #0d1c25;
-    /*bottom: 0;*/
-    /*width: 100%;*/
-    /*position: absolute;*/
 }
 
 .quiz-bg {
