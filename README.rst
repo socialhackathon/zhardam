@@ -1,7 +1,15 @@
 Jardam Kolu
 ===========
 
-Application that will help women that have been violenced
+Application that will help women that have been in violence.
+
+Running this application with Docker
+------------------------------------
+You need to have latest docker and docker-compose
+
+To run local full stack, use this command::
+    $ docker-compose -f local.yml up --build
+
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
