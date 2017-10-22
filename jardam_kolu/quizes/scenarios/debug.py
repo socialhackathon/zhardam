@@ -28,11 +28,11 @@ scenario = OrderedDict({
 
     },
     'q-1.1': {
-        'text': _("Что произошло"),
+        'text': _("Что произошло?"),
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },
@@ -50,11 +50,11 @@ scenario = OrderedDict({
 
     },
     'q-1.2': {
-        'text': _("Что произошло"),
+        'text': _("Что произошло?"),
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },
@@ -73,11 +73,11 @@ scenario = OrderedDict({
 
     },
     'q-1.3': {
-        'text': _("Что произошло"),
+        'text': _("Что произошло?"),
         'answers': [
 
             {
-                'text': _('Износилование'),
+                'text': _('Изнасилование'),
                 'type': QUESTION,
                 'content': 'q-2.1'
             },

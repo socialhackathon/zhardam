@@ -1,26 +1,20 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 {% block main %}
-    <h1>Our partners</h1>
+    <h1>{% trans 'Наши партнеры' %}</h1>
 
     <div class="container profits-section">
         <div class="card-deck">
             <div class="card">
                 <div class="card-body">
-                    <img class="img-responsive" src="{% static 'images/partn.jpg' %}">
-                    <h4 class="card-title">Кризисный центр 1</h4>
+                    <img class="image-partners" src="{% static 'images/sezim.jpg' %}">
+                    <h4 class="card-title">Кризисный центр "Сезим"</h4>
                 </div>
             </div>
             <div class="card">
                 <div class="card-body">
-                    <img class="img-responsive" src="{% static 'images/partn3.jpg' %}">
-                    <h4 class="card-title">Кризисный центр 1</h4>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <img class="img-responsive" src="{% static 'images/partn3.jpg' %}">
-                    <h4 class="card-title">Кризисный центр 1</h4>
+                    <img class="image-partners" src="{% static 'images/openline.jpg' %}">
+                    <h4 class="card-title">Открытая линия</h4>
                 </div>
             </div>
         </div>
