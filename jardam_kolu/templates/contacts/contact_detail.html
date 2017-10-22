@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load i18n %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 {% block main %}
     {{ contact.name }}
@@ -9,9 +10,15 @@
         {% trans "Show contact" %}
     </button>
     <div id="contacts"></div>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="AIzaSyDW3apOBKcLhUdAIPnZ2QiJfOpk5apOx3Q"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+
     <script>
         {#        TODO: почините тут js!!!!#}
-        $('#show_contacts').onclick(function(){
+        $('#show_contacts').click(function(){
             $.get("{% url 'contact-show' contact.id %}",
                 function( data ) {
                     console.log('got contacts');
