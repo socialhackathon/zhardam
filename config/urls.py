@@ -16,6 +16,7 @@ urlpatterns = [
     # User management
     url(r'^users/', include('jardam_kolu.users.urls', namespace='users')),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 
     # Your stuff: custom urls includes go here
     url(r'^quiz/', include('jardam_kolu.quizes.urls', namespace='quizes')),

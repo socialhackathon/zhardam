@@ -57,6 +57,7 @@ THIRD_PARTY_APPS = [
     'markitup',
     'taggit',
     'ckeditor',
+    'ckeditor_uploader',
 ]
 
 # Apps specific for this project go here.
@@ -213,7 +214,7 @@ STATICFILES_FINDERS = [
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
 MEDIA_ROOT = str(APPS_DIR('media'))
-
+CKEDITOR_UPLOAD_PATH = 'ckeditor'
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = '/media/'
 
