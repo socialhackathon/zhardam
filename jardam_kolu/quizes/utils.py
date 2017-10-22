@@ -49,7 +49,8 @@ class Scenario(object):
                 assert 'text' in answer, \
                     "In answer there should be field of the text and it should be a str"
                 if answer_type in [ARTICLE, EXTERNAL, SBSS]:
-                    assert su.is_url(answer['content']), "Content of the answer of this type should be url"
+                    pass
+                    # assert su.is_url(answer['content']), "Content of the answer of this type should be url"
                 elif answer_type in [QUESTION, ]:
                     assert answer['content'] in q_ids, \
                         "Content of the question type answer should be in declared question ids."

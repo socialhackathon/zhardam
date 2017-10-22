@@ -39,12 +39,12 @@ scenario = OrderedDict({
             {
                 'text': _('Похищение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             },
             {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             }
         ]
 
@@ -61,12 +61,12 @@ scenario = OrderedDict({
             {
                 'text': _('Похищение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             },
             {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             }
         ]
 
@@ -84,12 +84,12 @@ scenario = OrderedDict({
             {
                 'text': _('Похищение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             },
             {
                 'text': _('Избиение'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/'
+                'content': '/articles/1/'
             }
         ]
     },
@@ -105,7 +105,7 @@ scenario = OrderedDict({
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/articles/1/',
+                'content': '/articles/1/',
             }
         ]
     },
@@ -116,12 +116,12 @@ scenario = OrderedDict({
             {
                 'text': _('Да'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/contacts/1/',
+                'content': '/contacts/1/',
             },
             {
                 'text': _('Нет'),
                 'type': ARTICLE,
-                'content': 'https://zhardam.ga/contacts/2/',
+                'content': '/contacts/2/',
             }
         ]
     }
