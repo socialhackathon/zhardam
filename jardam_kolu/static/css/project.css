@@ -59,6 +59,10 @@ main {
     /*margin-bottom: 65px;*/
 }
 
+.our-logo {
+  width: 70px;
+}
+
 .footer {
     background-color: #306993;
     padding: 1rem;
