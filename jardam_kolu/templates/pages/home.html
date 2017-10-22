@@ -4,20 +4,23 @@
 
     <div class="top-section">
         <div class="container">
+
             <h1 class="top-section__heading">
-                Вы или ваш близкий человек столкнулся с насилием? <br> Мы можем вам помочь
+                Вы или ваш близкий человек столкнулся с насилием? <br>
+                Мы можем вам <a href="{% url 'quizes:quiz' %}"
+                                role="button"
+                                class="btn btn-primary btn-lg">помочь</a>
             </h1>
         </div>
     </div>
 
     <div class="container profits-section">
         <div class="card-deck">
-                {% for article in main_articles %}
-                    <div class="card">
+            {% for article in main_articles %}
+                <div class="card">
                     {% include 'articles/article-card.html' with article=article %}
-                    </div>
-                {% endfor %}
-
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
