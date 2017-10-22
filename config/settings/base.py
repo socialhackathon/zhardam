@@ -56,6 +56,7 @@ THIRD_PARTY_APPS = [
     'ordered_model',
     'markitup',
     'taggit',
+    'mptt',
     'ckeditor',
     'ckeditor_uploader',
 ]
@@ -67,6 +68,7 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     'jardam_kolu.quizes.apps.QuizAppConfig',
     'jardam_kolu.articles',
+    'jardam_kolu.contacts'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

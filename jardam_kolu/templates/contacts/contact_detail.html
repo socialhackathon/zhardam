@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block main %}
+    {{ contact.name }}
+    {{ contact.complex }}
+    {#    TODO: add captcha to show data #}
+    <button id="show_contacts">
+        {% trans "Show contact" %}
+    </button>
+    <div id="contacts"></div>
+    <script>
+        $(function($){
+            $('#show_contacts').onclick(function(){
+                $.get("{% url 'contact-show' contact.id %}",
+                    function( data ) {
+                        console.log('got contacts');
+                        $( "#contacts" ).html( data );
+                    });
+            });
+        });
+    </script>
+{% endblock %}

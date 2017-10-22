@@ -55,4 +55,4 @@ django-andablog
 django-taggit
 markdown
 django-ckeditor
-
+django-mptt
